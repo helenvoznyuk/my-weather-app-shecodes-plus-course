@@ -1,0 +1,121 @@
+body {
+  background-color: #edfaff;
+}
+h1 {
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+#main-temperature {
+  font-size: 60px;
+  padding-bottom: 1px;
+  color: black;
+}
+
+.map-card,
+.city-card {
+  display: block;
+  margin: 0 auto;
+  margin-top: 150px;
+  padding: 20px;
+}
+
+.map-card {
+  margin-right: -2px;
+}
+
+.map-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.city-card {
+  margin-left: -2px;
+  padding: 15px;
+}
+
+.days-card {
+  display: block;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.day-one,
+.day-two,
+.day-tree,
+.day-four,
+.day-five {
+  display: block;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+}
+
+.temperature-block {
+  display: block;
+  margin: 0 auto;
+}
+
+.icon-cloud-sun,
+.icon-cloud,
+.icon-sun,
+.icon-cloud-rain,
+.icon-cloud-sun-rain {
+  color: grey;
+  font-size: 50px;
+  margin: 0px;
+  padding: 0;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+span.temperature-monday,
+span.temperature-tuesday,
+span.temperature-wednesday,
+span.temperature-thursday,
+span.temperature-friday {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+}
+.monday,
+.tuesday,
+.wednesday,
+.thursday,
+.friday {
+  text-align: center;
+  color: black;
+  font-size: 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+.weather-condition {
+  font-size: 22px;
+}
+
+.weather-condition-icon {
+  font-size: 30px;
+}
+
+#degree-conversion {
+  font-size: 30px;
+}
+
+#celsius-link,
+#fahrenheit-link {
+  text-decoration: none;
+}
+
+#entered-location {
+  text-transform: capitalize;
+}

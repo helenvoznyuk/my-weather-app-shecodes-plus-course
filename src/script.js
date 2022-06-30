@@ -54,8 +54,8 @@ function showLocation(event) {
     let correctTemp = document.querySelector("#main-temperature");
     correctTemp.innerHTML = `${enteredTemp}`;
 
-    let displayedCondition = document.querySelector("#weather-condition");
-    displayedCondition.innerHTML = response.data.weather[0].main;
+    let displayedConditionCity = document.querySelector("#weather-condition");
+    displayedConditionCity.innerHTML = response.data.weather[0].main;
   }
 
   axios.get(apiUrl).then(showWeather);

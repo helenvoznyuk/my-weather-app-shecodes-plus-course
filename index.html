@@ -31,18 +31,26 @@
           <div class="card border-secondary mb-3 map-card" style="width: 400px">
             <div class="card-body">
               <form id="city-input-form">
-                <input
-                  type="text"
-                  placeholder="Enter a city"
-                  id="city-input"
-                  style="width: 180px"
-                />
-                <input type="submit" value="Search" id="city-input-button" />
-                <!-- <input
-                  type="submit"
-                  value="Current"
-                  id="current-city-input-button"
-                /> -->
+                <div class="row">
+                  <div class="col-9">
+                    <input
+                      type="text"
+                      placeholder="Enter a city"
+                      id="city-input"
+                      style="width: 240px"
+                      class="form-control"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <input
+                      type="submit"
+                      value="Search"
+                      id="city-input-button"
+                      class="btn btn-primary"
+                    />
+                  </div>
+                </div>
               </form>
 
               <br />
@@ -57,28 +65,53 @@
         <div class="col-6">
           <div
             class="card text-end border-secondary mb-3 city-card"
-            style="width: 400px"
+            style="width: 400px; padding-top: 7px"
           >
             <div class="card-body">
-              <h1 id="entered-location">Kyiv, Ukraine</h1>
+              <h1 id="entered-location">Kyiv</h1>
               <span class="current-date" id="current-date"></span>
-              <div class="card text-end temperature-block" style="width: 325px">
-                <div class="card-body">
-                  <span id="main-temperature"></span>
-                  <span id="degree-conversion">
-                    <a href="#" class="active" id="celsius-link">°C</a>
-                    |
-                    <a href="#" id="fahrenheit-link">°F</a>
-                  </span>
-                  <br />
-                  <span class="weather-condition" id="weather-condition"></span>
-                  <img src="" alt="Clear" id="icon" class="float-left" />
+              <div class="card temperature-block" style="width: 325px">
+                <div
+                  class="card-body"
+                  style="
+                    padding-top: 8px;
+                    padding-left: 10px;
+                    padding-right: 20px;
+                    padding-bottom: 20px;
+                  "
+                >
+                  <div class="row">
+                    <div class="col-6">
+                      <img
+                        src="http://openweathermap.org/img/wn/11d@2x.png"
+                        id="icon"
+                      />
+
+                      <span class="weather-condition" id="weather-condition"
+                        >Thunderstorm</span
+                      >
+                    </div>
+                    <div class="col-6">
+                      <span id="main-temperature"></span>
+
+                      <span id="degree-conversion">
+                        <a href="#" class="active" id="celsius-link">°C</a>
+                        |
+                        <a href="#" id="fahrenheit-link">°F</a>
+                      </span>
+                      <ul>
+                        <li>Humidity: <span id="humidity"></span>%</li>
+                        <li>Wind: <span id="wind"></span> km/h</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <div class="card border-secondary mb-3 days-card" style="width: 820px">
         <div class="card-body">
           <div class="row">

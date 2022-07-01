@@ -26,7 +26,7 @@ function displayDayTime() {
   ];
 
   let day = days[now.getDay()];
-  let correctDateFormat = `${day} ${hours}:${minutes}`;
+  let correctDateFormat = `UPD: ${day} ${hours}:${minutes}`;
 
   let spanDate = document.querySelector("#current-date");
   spanDate.innerHTML = correctDateFormat;

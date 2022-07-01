@@ -99,6 +99,11 @@ span.temperature-friday {
   margin: 0 auto;
 }
 
+.app-wrapper {
+  max-width: 820px;
+  margin: 30px auto;
+}
+
 .weather-condition {
   font-size: 22px;
 }
@@ -107,8 +112,17 @@ span.temperature-friday {
   font-size: 30px;
 }
 
+a.active {
+  color: black;
+  cursor: default;
+}
+
+.main-temperature .active:hover {
+  text-decoration: none;
+}
+
 #degree-conversion {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 #celsius-link,
@@ -118,4 +132,8 @@ span.temperature-friday {
 
 #entered-location {
   text-transform: capitalize;
+}
+
+#icon {
+  size: 10px;
 }

@@ -38,11 +38,11 @@
                   style="width: 180px"
                 />
                 <input type="submit" value="Search" id="city-input-button" />
-                <input
+                <!-- <input
                   type="submit"
                   value="Current"
                   id="current-city-input-button"
-                />
+                /> -->
               </form>
 
               <br />
@@ -64,17 +64,15 @@
               <span class="current-date" id="current-date"></span>
               <div class="card text-end temperature-block" style="width: 325px">
                 <div class="card-body">
-                  <span id="main-temperature">22</span>
-                  <!-- <span id="degree-conversion">
-                    <a href="#" id="celsius-link">°C</a>
+                  <span id="main-temperature"></span>
+                  <span id="degree-conversion">
+                    <a href="#" class="active" id="celsius-link">°C</a>
                     |
                     <a href="#" id="fahrenheit-link">°F</a>
-                  </span> -->
+                  </span>
                   <br />
-                  <span class="weather-condition" id="weather-condition"
-                    >thunderstorm</span
-                  >
-                  <!--  <i class="fa-solid fa-cloud-bolt weather-condition-icon"></i>  -->
+                  <span class="weather-condition" id="weather-condition"></span>
+                  <img src="" alt="Clear" id="icon" class="float-left" />
                 </div>
               </div>
             </div>

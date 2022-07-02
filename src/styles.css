@@ -54,11 +54,7 @@ li {
   padding-right: 10px;
 }
 
-.day-one,
-.day-two,
-.day-tree,
-.day-four,
-.day-five {
+.day-one {
   display: block;
   margin: 0 auto;
 }

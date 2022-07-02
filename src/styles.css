@@ -88,15 +88,13 @@ footer {
   padding-bottom: 7px;
 }
 
-span.temperature-monday,
-span.temperature-tuesday,
-span.temperature-wednesday,
-span.temperature-thursday,
-span.temperature-friday {
+.temperature-daily-wrapper {
   text-align: center;
-
-  color: black;
+  color: #48484a;
   font-size: 20px;
+  margin: 0 auto;
+  display: block;
+  padding: 0;
 }
 
 span.temp-max {
@@ -162,4 +160,14 @@ a.active {
   margin: 0 auto;
   padding: 0;
   color: grey;
+}
+
+#forecast-icons {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#city-input-button {
+  margin-left: 15px;
 }

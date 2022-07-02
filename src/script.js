@@ -135,25 +135,6 @@ function showLocation(event) {
   axios.get(apiUrl).then(showWeather);
 }
 
-// function displayFahrenheitTemperature(event) {
-//   event.preventDefault();
-
-//   let temperatureElement = document.querySelector("#main-temperature");
-//   let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
-//   temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
-//   celsiusLink.classList.remove("active");
-//   fahrenheitLink.classList.add("active");
-// }
-
-// function displayCelsiusTemperature(event) {
-//   event.preventDefault();
-
-//   let temperatureElement = document.querySelector("#main-temperature");
-//   temperatureElement.innerHTML = Math.round(celsiusTemperature);
-//   celsiusLink.classList.add("active");
-//   fahrenheitLink.classList.remove("active");
-// }
-
 function myCurrentWeather(response) {
   let detectedTemp = Math.round(response.data.main.temp);
   let correctTemp = document.querySelector("#main-temperature");
@@ -194,14 +175,6 @@ function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(getPosition);
 }
 getCurrentPosition();
-
-// let celsiusTemperature = null;
-
-// let fahrenheitLink = document.querySelector("#fahrenheit-link");
-// fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-// let celsiusLink = document.querySelector("#celsius-link");
-// celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 let form = document.querySelector("#city-input-form");
 form.addEventListener("submit", showLocation);

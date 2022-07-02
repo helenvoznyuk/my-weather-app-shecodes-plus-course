@@ -32,7 +32,8 @@ function displayDayTime() {
   spanDate.innerHTML = correctDateFormat;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
@@ -58,6 +59,12 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  let apiKey = "d79bb097b2e1cbd47665f848849e6265";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showWeather(response) {
   let enteredTemp = Math.round(response.data.main.temp);
   let correctTemp = document.querySelector("#main-temperature");
@@ -79,6 +86,8 @@ function showWeather(response) {
   let windElement = document.querySelector("#wind");
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+
+  getForecast(response.data.coord);
 }
 
 function showLocation(event) {
@@ -141,6 +150,8 @@ function myCurrentWeather(response) {
   let windElement = document.querySelector("#wind");
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+
+  getForecast(response.data.coord);
 }
 
 function getPosition(position) {
@@ -168,7 +179,6 @@ let form = document.querySelector("#city-input-form");
 form.addEventListener("submit", showLocation);
 
 displayDayTime();
-displayForecast();
 
 // google maps intergration
 // function showOnMap{

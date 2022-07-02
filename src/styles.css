@@ -20,10 +20,8 @@ li {
   color: black;
 }
 
-#main-temperature {
-  font-size: 60px;
-  padding-bottom: 1px;
-  color: black;
+footer {
+  text-align: center;
 }
 
 .map-card,
@@ -59,29 +57,9 @@ li {
   margin: 0 auto;
 }
 
-footer {
-  text-align: center;
-}
-
 .temperature-block {
   display: block;
   margin: 0 auto;
-}
-
-.icon-cloud-sun,
-.icon-cloud,
-.icon-sun,
-.icon-cloud-rain,
-.icon-cloud-sun-rain {
-  color: grey;
-  font-size: 50px;
-  margin: 0px;
-  padding: 0;
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-  padding-top: 7px;
-  padding-bottom: 7px;
 }
 
 .temperature-daily-wrapper {
@@ -97,17 +75,22 @@ span.temp-max {
   font-size: 18px;
 }
 
+div.wrap-date {
+  margin-bottom: 13.5px;
+}
+
 span.temp-min {
   font-size: 15px;
 }
 
-.monday,
-.tuesday,
-.wednesday,
-.thursday,
-.friday {
-  text-align: center;
+a.active {
   color: black;
+  cursor: default;
+}
+
+.monday {
+  text-align: center;
+  color: grey;
   font-size: 15px;
   display: block;
   margin: 0 auto;
@@ -118,24 +101,21 @@ span.temp-min {
   margin: 30px auto;
 }
 
-a.active {
-  color: black;
-  cursor: default;
-}
-
 .main-temperature .active:hover {
   text-decoration: none;
 }
 
-#degree-conversion {
+#main-temperature {
+  font-size: 60px;
+  padding-bottom: 1px;
+  color: black;
+}
+
+#celsius-link {
+  text-decoration: none;
   font-size: 20px;
   position: relative;
   top: -27px;
-}
-
-#celsius-link,
-#fahrenheit-link {
-  text-decoration: none;
 }
 
 #entered-location {
@@ -166,8 +146,4 @@ a.active {
 
 #city-input-button {
   margin-left: 15px;
-}
-
-div.wrap-date {
-  margin-bottom: 13.5px;
 }

@@ -142,3 +142,11 @@ let form = document.querySelector("#city-input-form");
 form.addEventListener("submit", showLocation);
 
 displayDayTime();
+
+// google maps intergration
+// function showOnMap{
+//   let key = "AIzaSyAC1-img33PKPzNjG_4hTH3rroqZc1AUgA"
+
+//   let googleUrl = `https://maps.googleapis.com/maps/api/staticmap?center=0,0&zoom=1&size=100x100&key=YOUR_API_KEY&signature=YOUR_SIGNATURE`
+
+// }

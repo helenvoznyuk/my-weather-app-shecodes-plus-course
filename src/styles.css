@@ -94,11 +94,19 @@ span.temperature-wednesday,
 span.temperature-thursday,
 span.temperature-friday {
   text-align: center;
+
   color: black;
   font-size: 20px;
-  display: block;
-  margin: 0 auto;
 }
+
+span.temp-max {
+  font-size: 18px;
+}
+
+span.temp-min {
+  font-size: 15px;
+}
+
 .monday,
 .tuesday,
 .wednesday,

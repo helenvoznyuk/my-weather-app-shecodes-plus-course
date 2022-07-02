@@ -32,6 +32,32 @@ function displayDayTime() {
   spanDate.innerHTML = correctDateFormat;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+
+  let forecastHTML = `<div class="card-body">
+  <div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+     <div class="card day-one" style="width: 150px">
+              <div class="card-body">
+                <span class="monday">${day}</span>
+                <i class="fa-solid fa-cloud-sun icon-cloud-sun"></i>
+                <span class="temp-max temperature-monday">21° |</span>
+                <span class="temp-min temperature-monday">9°</span>
+              </div>
+            </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showWeather(response) {
   let enteredTemp = Math.round(response.data.main.temp);
   let correctTemp = document.querySelector("#main-temperature");
@@ -142,6 +168,7 @@ let form = document.querySelector("#city-input-form");
 form.addEventListener("submit", showLocation);
 
 displayDayTime();
+displayForecast();
 
 // google maps intergration
 // function showOnMap{
